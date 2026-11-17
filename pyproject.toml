@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "py_secrets_xethhung12"
+version = "0.0.0"
+authors = [
+  { name="Xeth Hung", email="admin@xethh.me" },
+]
+description = "Encrypted secret manager CLI and library using AES-256-GCM (via CLI key, OS keyring, or environment variable)"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities",
+]
+license = "GPL-3.0-only"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "keyring",
+    "cryptography",
+]
+
+[project.urls]
+Homepage = "https://github.com/xh-dev/py-secrets-xethhung12"
+Issues = "https://github.com/xh-dev/py-secrets-xethhung12/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/py_secrets_xethhung12"]
+
+[project.scripts]
+py-secrets-xethhung12="py_secrets_xethhung12.secrets:main"
+

@@ -1,0 +1,9 @@
+.venv
+vault.kv
+src/**/__pycache__/**
+dist
+.idea
+*.sec
+build.sh
+build-and-deploy.sh
+export-deployment-keys.sh
